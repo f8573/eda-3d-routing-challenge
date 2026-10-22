@@ -1,55 +1,62 @@
 {
   "cases": {
     "ctrl": {
-      "benchmark_sha256": "41a3cecd790bacf758db6847404c612c3e84bb006dc91d7a1a8155ff58e6725f",
+      "benchmark_sha256": "024ebda5df67cf2077542524a2bf6109bd40937c9ee901d7d8ec0abcf55402cb",
       "execution_record": {
         "case": "ctrl",
         "command": [
-          "C:\\Users\\James\\Downloads\\EDA\\m2_3-campaign-20261011\\.venv\\Scripts\\python.exe",
-          "C:\\Users\\James\\Downloads\\EDA\\public-m3d-router\\run_suite.py",
-          "--worker-task",
-          "C:\\Users\\James\\Downloads\\EDA\\m2_4-regional-pilot-v2\\production\\runs\\designs\\runs\\ctrl-seed20261012-b97561170eff\\task.json"
+          "python3",
+          "/home/james/Documents/Codex/2026-10-21/your-task-is-x20/work/m3d-router/run_suite.py",
+          "/home/james/Documents/Codex/2026-10-21/your-task-is-x20/work/challenge/benchmarks_designs",
+          "/home/james/Documents/Codex/2026-10-21/your-task-is-x20/work/campaign/runs_1200/designs/ctrl/seed_20261025/out",
+          "--time",
+          "1200",
+          "--seeds",
+          "1",
+          "--seed0",
+          "20261025",
+          "--jobs",
+          "1",
+          "--cases",
+          "ctrl"
         ],
-        "concurrent_worker_processes_at_launch": 1,
-        "end_to_end_wall_seconds": 317.10394010000164,
-        "entrypoint": "public-m3d-router/run_suite.py --worker-task",
+        "concurrent_worker_processes_at_launch": 24,
+        "end_to_end_wall_seconds": 1200.653,
+        "entrypoint": "m3d-router/run_suite.py",
         "hardware": {
-          "description": "AMD Ryzen 7 8845HS w/ Radeon 780M Graphics (8 physical cores, 16 logical threads), Microsoft Windows 11 Pro Insider Preview, version 10.0.26340, 16440479744 bytes RAM (15.31 GiB), CPU-only",
+          "description": "AMD Ryzen 9 3950X 16-Core Processor (16 physical cores, 32 logical threads), Linux 7.0.0-34-generic, 67314638848 bytes RAM, CPU-only",
           "gpu_used": false,
-          "logical_cpus": 16,
-          "physical_cores": 8,
-          "platform": "Microsoft Windows 11 Pro Insider Preview, version 10.0.26340",
-          "processor": "AMD Ryzen 7 8845HS w/ Radeon 780M Graphics",
-          "ram_bytes": 16440479744
+          "logical_cpus": 32,
+          "physical_cores": 16,
+          "platform": "Linux 7.0.0-34-generic",
+          "processor": "AMD Ryzen 9 3950X 16-Core Processor",
+          "ram_bytes": 67314638848
         },
-        "input_benchmark_sha256": "41a3cecd790bacf758db6847404c612c3e84bb006dc91d7a1a8155ff58e6725f",
+        "input_benchmark_sha256": "024ebda5df67cf2077542524a2bf6109bd40937c9ee901d7d8ec0abcf55402cb",
         "official_validation": {
           "baseline_total": 73148,
-          "checker_sha256": "27a38b88ca8f114e27551f4e2abf6621c8fa4e2feebd64e0722747f57d6ed564",
+          "checker_sha256": "1f05fce3119300a056ebeeecd3b82a303fdd839c1392939bb52e4434393959dd",
           "legal": true,
-          "score_ratio": 1.3805156078964256,
-          "scorer_sha256": "0f98c56ff0439dfe6383d1216e43265d954a424edbc9e6bed8ae3666b3b56da3",
-          "total_delay": 52986
+          "score_ratio": 1.4218956535261644,
+          "scorer_sha256": "c0bf2d0c8a7eefa4c58a24fdd371013a856ad08b7bdc19bf5376faf1435ec019",
+          "total_delay": 51444
         },
         "parent_checkpoints": [],
-        "parent_sampled_cpu_seconds": 0.015625,
-        "peak_working_set_bytes": 4423680,
-        "producer_finish_utc": "2026-10-12T23:59:52.438256+00:00",
-        "producer_id": "ctrl-seed20261012-b97561170eff",
-        "producer_start_utc": "2026-10-12T23:54:35.334319+00:00",
+        "producer_finish_utc": "2026-10-22T06:44:45.507186+00:00",
+        "producer_start_utc": "2026-10-22T06:24:44.854136+00:00",
         "production_ancestry": [
           {
-            "sha256": "41a3cecd790bacf758db6847404c612c3e84bb006dc91d7a1a8155ff58e6725f",
+            "sha256": "024ebda5df67cf2077542524a2bf6109bd40937c9ee901d7d8ec0abcf55402cb",
             "type": "raw_benchmark"
           }
         ],
         "random_seeds": [
-          20261012
+          20261025
         ],
-        "route_sha256": "d3c013c285c9572b2ccc3692df2829539b078d7222b5357dae291fdab51af73d",
-        "route_write_utc": "2026-10-12T23:59:52.219446+00:00",
+        "route_sha256": "5531973c0814029d138adb95ec046a0e3e555af87634e5d0411a55497298e0c6",
+        "route_write_utc": "2026-10-22T06:44:45.505187+00:00",
         "router_configuration": {
-          "budget_seconds": 45.0,
+          "budget_seconds": 1200,
           "lns": {
             "T0": 50,
             "T1": 2,
@@ -66,35 +73,34 @@
             "vcost": 3.0
           }
         },
-        "runtime_scope": "parent monotonic launch-to-worker-exit; worker includes imports, input loading, routing, final checker and route write",
+        "runtime_scope": "End-to-end run_suite.py launch through process exit, including imports, input loading, routing, official checking, and route output. Runtime was reconstructed from the run.log creation and final-write timestamps.",
         "schema": "m3d-route-production-record-v1",
-        "seed": 20261012,
+        "seed": 20261025,
         "source_commit": "81e4729b7c17c40987a8f57436fa94b9cb1ece96",
-        "source_dirty": true,
+        "source_dirty": false,
         "source_files_sha256": {
-          "core.py": "6007addffd1828759521be25d04a30977957f79e815b5cab36a59c681ecd455f",
-          "pack_submission.py": "9a44072c9200bceae0e4c364d821b155d88c03df14ff5bfdbb622c5f2215bef2",
-          "router.py": "5d99dc8dcad802f7fb1b38e7c715bb8bdf17fc8816b658743b3b39183bbfadf3",
-          "run_suite.py": "f7f0564bf4c51fd7a1ab204c679159ab3cc32052e4f78fbea210803350e4d3a2"
+          "core.py": "0884bc93c5aea1583c8e7d28ad80552cc94308e005c059f0e5e533ba41e8600c",
+          "pack_submission.py": "b24aafc03ad3cef3889d4e4db3a1e1437c6fbc815cdc193fe9a7843ff569c46b",
+          "router.py": "f1e8fcc92d8474ea985f0c1a406e852562dd8989dfd66e3bc3bc5d0bb30724f5",
+          "run_suite.py": "6645ce8a74843bac6d70d2ee67463840b21ac7390b0eb0748d85c3cc03159a89"
         },
-        "threads": 1,
-        "worker_process_cpu_seconds": 304.28125
+        "threads": 1
       },
-      "execution_record_sha256": "b0f294b59985551c23d3e30fdeace78ef632c2d65b5b308d62e6bdc16b47a51d",
-      "producer_run_directory": "m2_4-regional-pilot-v2/production/runs/designs/runs/ctrl-seed20261012-b97561170eff",
-      "route_sha256": "d3c013c285c9572b2ccc3692df2829539b078d7222b5357dae291fdab51af73d",
+      "execution_record_sha256": "c169508d24efdefaf7d4c96e612f227a4d4efd7430382a6d5e096a930acaa33a",
+      "producer_run_directory": "campaign/runs_1200/designs/ctrl/seed_20261025",
+      "route_sha256": "5531973c0814029d138adb95ec046a0e3e555af87634e5d0411a55497298e0c6",
       "selected_pointer": {
         "case": "ctrl",
-        "execution_path": "runs/ctrl-seed20261012-b97561170eff/execution.json",
-        "execution_sha256": "b0f294b59985551c23d3e30fdeace78ef632c2d65b5b308d62e6bdc16b47a51d",
-        "route_path": "runs/ctrl-seed20261012-b97561170eff/candidate.sol.json",
-        "route_sha256": "d3c013c285c9572b2ccc3692df2829539b078d7222b5357dae291fdab51af73d",
-        "run_id": "ctrl-seed20261012-b97561170eff",
+        "execution_path": "campaign/runs_1200/designs/ctrl/seed_20261025/execution.json",
+        "execution_sha256": "c169508d24efdefaf7d4c96e612f227a4d4efd7430382a6d5e096a930acaa33a",
+        "route_path": "campaign/runs_1200/designs/ctrl/seed_20261025/out/ctrl.sol.json",
+        "route_sha256": "5531973c0814029d138adb95ec046a0e3e555af87634e5d0411a55497298e0c6",
+        "run_id": "campaign/runs_1200/designs/ctrl/seed_20261025",
         "schema": "m3d-selected-route-v1",
-        "total_delay": 52986
+        "total_delay": 51444
       },
-      "selected_pointer_sha256": "a63554f6784b0abdc527a62af042a0fd583413fdd80d4b6b0e230b98e75b68a3",
-      "source_snapshot_sha256": "7d6122a6611cd0dacce40187807bdd90b6ea4900968d51a034a8c774ebed4e85"
+      "selected_pointer_sha256": "a1e308b2d4bd5e484786caa0d7b708cbd9d7081ec388e8aca26d791886738d52",
+      "source_snapshot_sha256": "246f4d38304f7e28e55835273c3d3f4deb07b5f8dc577fcce8e57286ba40d75a"
     },
     "int2float": {
       "benchmark_sha256": "a529b84008f61fa80be22f492aef2bdf58b3496bdfab8ca26fa14a9d74d70888",
@@ -200,55 +206,62 @@
       "source_snapshot_sha256": "1685cd1f4765e9c2b9959e9005db78ee2b8626428e88dc19b3fb7b52df812d52"
     },
     "router": {
-      "benchmark_sha256": "6677988450d5589bcfa1d16e9add4e10cb2055baaca6f88e5d515e564c49cab6",
+      "benchmark_sha256": "34096ab422d9b1cfff1c607bfc66e28a2a9ab43eeb1e0cd34e481162f017a98c",
       "execution_record": {
         "case": "router",
         "command": [
-          "C:\\Users\\James\\Downloads\\EDA\\m2_3-campaign-20261011\\.venv\\Scripts\\python.exe",
-          "C:\\Users\\James\\Downloads\\EDA\\public-m3d-router\\run_suite.py",
-          "--worker-task",
-          "C:\\Users\\James\\Downloads\\EDA\\m2_4-regional-pilot-v2\\production\\runs\\designs\\runs\\router-seed20261012-ce0c7d606bdb\\task.json"
+          "python3",
+          "/home/james/Documents/Codex/2026-10-21/your-task-is-x20/work/m3d-router/run_suite.py",
+          "/home/james/Documents/Codex/2026-10-21/your-task-is-x20/work/challenge/benchmarks_designs",
+          "/home/james/Documents/Codex/2026-10-21/your-task-is-x20/work/campaign/runs_1200/designs/router/seed_20261025/out",
+          "--time",
+          "1200",
+          "--seeds",
+          "1",
+          "--seed0",
+          "20261025",
+          "--jobs",
+          "1",
+          "--cases",
+          "router"
         ],
-        "concurrent_worker_processes_at_launch": 1,
-        "end_to_end_wall_seconds": 173.91807569999946,
-        "entrypoint": "public-m3d-router/run_suite.py --worker-task",
+        "concurrent_worker_processes_at_launch": 24,
+        "end_to_end_wall_seconds": 1200.78,
+        "entrypoint": "m3d-router/run_suite.py",
         "hardware": {
-          "description": "AMD Ryzen 7 8845HS w/ Radeon 780M Graphics (8 physical cores, 16 logical threads), Microsoft Windows 11 Pro Insider Preview, version 10.0.26340, 16440479744 bytes RAM (15.31 GiB), CPU-only",
+          "description": "AMD Ryzen 9 3950X 16-Core Processor (16 physical cores, 32 logical threads), Linux 7.0.0-34-generic, 67314638848 bytes RAM, CPU-only",
           "gpu_used": false,
-          "logical_cpus": 16,
-          "physical_cores": 8,
-          "platform": "Microsoft Windows 11 Pro Insider Preview, version 10.0.26340",
-          "processor": "AMD Ryzen 7 8845HS w/ Radeon 780M Graphics",
-          "ram_bytes": 16440479744
+          "logical_cpus": 32,
+          "physical_cores": 16,
+          "platform": "Linux 7.0.0-34-generic",
+          "processor": "AMD Ryzen 9 3950X 16-Core Processor",
+          "ram_bytes": 67314638848
         },
-        "input_benchmark_sha256": "6677988450d5589bcfa1d16e9add4e10cb2055baaca6f88e5d515e564c49cab6",
+        "input_benchmark_sha256": "34096ab422d9b1cfff1c607bfc66e28a2a9ab43eeb1e0cd34e481162f017a98c",
         "official_validation": {
           "baseline_total": 82491,
-          "checker_sha256": "27a38b88ca8f114e27551f4e2abf6621c8fa4e2feebd64e0722747f57d6ed564",
+          "checker_sha256": "1f05fce3119300a056ebeeecd3b82a303fdd839c1392939bb52e4434393959dd",
           "legal": true,
-          "score_ratio": 1.1198430691120373,
-          "scorer_sha256": "0f98c56ff0439dfe6383d1216e43265d954a424edbc9e6bed8ae3666b3b56da3",
-          "total_delay": 73663
+          "score_ratio": 1.1584675663909447,
+          "scorer_sha256": "c0bf2d0c8a7eefa4c58a24fdd371013a856ad08b7bdc19bf5376faf1435ec019",
+          "total_delay": 71207
         },
         "parent_checkpoints": [],
-        "parent_sampled_cpu_seconds": 0.03125,
-        "peak_working_set_bytes": 4419584,
-        "producer_finish_utc": "2026-10-12T22:13:46.159805+00:00",
-        "producer_id": "router-seed20261012-ce0c7d606bdb",
-        "producer_start_utc": "2026-10-12T22:10:52.241356+00:00",
+        "producer_finish_utc": "2026-10-22T06:44:45.652187+00:00",
+        "producer_start_utc": "2026-10-22T06:24:44.872136+00:00",
         "production_ancestry": [
           {
-            "sha256": "6677988450d5589bcfa1d16e9add4e10cb2055baaca6f88e5d515e564c49cab6",
+            "sha256": "34096ab422d9b1cfff1c607bfc66e28a2a9ab43eeb1e0cd34e481162f017a98c",
             "type": "raw_benchmark"
           }
         ],
         "random_seeds": [
-          20261012
+          20261025
         ],
-        "route_sha256": "cbefbd9dd24dd354d757b75074a86d78b58cbeb3bda5f82c92e5183cc5ca2a43",
-        "route_write_utc": "2026-10-12T22:13:45.868685+00:00",
+        "route_sha256": "3c63084bf0ca9c8f8748bbec3b4717daf808099272540c9343b92f23155a7df4",
+        "route_write_utc": "2026-10-22T06:44:45.646187+00:00",
         "router_configuration": {
-          "budget_seconds": 45.0,
+          "budget_seconds": 1200,
           "lns": {
             "T0": 50,
             "T1": 2,
@@ -265,48 +278,47 @@
             "vcost": 3.0
           }
         },
-        "runtime_scope": "parent monotonic launch-to-worker-exit; worker includes imports, input loading, routing, final checker and route write",
+        "runtime_scope": "End-to-end run_suite.py launch through process exit, including imports, input loading, routing, official checking, and route output. Runtime was reconstructed from the run.log creation and final-write timestamps.",
         "schema": "m3d-route-production-record-v1",
-        "seed": 20261012,
+        "seed": 20261025,
         "source_commit": "81e4729b7c17c40987a8f57436fa94b9cb1ece96",
-        "source_dirty": true,
+        "source_dirty": false,
         "source_files_sha256": {
-          "core.py": "6007addffd1828759521be25d04a30977957f79e815b5cab36a59c681ecd455f",
-          "pack_submission.py": "9a44072c9200bceae0e4c364d821b155d88c03df14ff5bfdbb622c5f2215bef2",
-          "router.py": "5d99dc8dcad802f7fb1b38e7c715bb8bdf17fc8816b658743b3b39183bbfadf3",
-          "run_suite.py": "f7f0564bf4c51fd7a1ab204c679159ab3cc32052e4f78fbea210803350e4d3a2"
+          "core.py": "0884bc93c5aea1583c8e7d28ad80552cc94308e005c059f0e5e533ba41e8600c",
+          "pack_submission.py": "b24aafc03ad3cef3889d4e4db3a1e1437c6fbc815cdc193fe9a7843ff569c46b",
+          "router.py": "f1e8fcc92d8474ea985f0c1a406e852562dd8989dfd66e3bc3bc5d0bb30724f5",
+          "run_suite.py": "6645ce8a74843bac6d70d2ee67463840b21ac7390b0eb0748d85c3cc03159a89"
         },
-        "threads": 1,
-        "worker_process_cpu_seconds": 166.9375
+        "threads": 1
       },
-      "execution_record_sha256": "833a51df86849b236f945043eb6568e6e31f8074e345c74f19f25ad52fa9959c",
-      "producer_run_directory": "m2_4-regional-pilot-v2/production/runs/designs/runs/router-seed20261012-ce0c7d606bdb",
-      "route_sha256": "cbefbd9dd24dd354d757b75074a86d78b58cbeb3bda5f82c92e5183cc5ca2a43",
+      "execution_record_sha256": "19421a31a92df5958b6a10286d032f82671c47740efab91b050975a2ac2fe097",
+      "producer_run_directory": "campaign/runs_1200/designs/router/seed_20261025",
+      "route_sha256": "3c63084bf0ca9c8f8748bbec3b4717daf808099272540c9343b92f23155a7df4",
       "selected_pointer": {
         "case": "router",
-        "execution_path": "runs/router-seed20261012-ce0c7d606bdb/execution.json",
-        "execution_sha256": "833a51df86849b236f945043eb6568e6e31f8074e345c74f19f25ad52fa9959c",
-        "route_path": "runs/router-seed20261012-ce0c7d606bdb/candidate.sol.json",
-        "route_sha256": "cbefbd9dd24dd354d757b75074a86d78b58cbeb3bda5f82c92e5183cc5ca2a43",
-        "run_id": "router-seed20261012-ce0c7d606bdb",
+        "execution_path": "campaign/runs_1200/designs/router/seed_20261025/execution.json",
+        "execution_sha256": "19421a31a92df5958b6a10286d032f82671c47740efab91b050975a2ac2fe097",
+        "route_path": "campaign/runs_1200/designs/router/seed_20261025/out/router.sol.json",
+        "route_sha256": "3c63084bf0ca9c8f8748bbec3b4717daf808099272540c9343b92f23155a7df4",
+        "run_id": "campaign/runs_1200/designs/router/seed_20261025",
         "schema": "m3d-selected-route-v1",
-        "total_delay": 73663
+        "total_delay": 71207
       },
-      "selected_pointer_sha256": "9afd5cbd3d346c357d0fbdb34406d745cbe421518ab3d04c5d73f6acadedb207",
-      "source_snapshot_sha256": "7d6122a6611cd0dacce40187807bdd90b6ea4900968d51a034a8c774ebed4e85"
+      "selected_pointer_sha256": "1a2fbebfee34ff2fd2cd099399a5d4d581c9dcda03afd2e8db997c33baa14476",
+      "source_snapshot_sha256": "246f4d38304f7e28e55835273c3d3f4deb07b5f8dc577fcce8e57286ba40d75a"
     }
   },
   "official_score": {
-    "aggregate_score": 1.3077652684030803,
+    "aggregate_score": 1.3357161347035,
     "cases": [
       {
         "baseline_delay": 73148,
         "case": "ctrl",
         "legal": true,
-        "ratio": 1.3805156078964256,
+        "ratio": 1.4218956535261644,
         "reasons": [],
-        "runtime_s": null,
-        "total_delay": 52986
+        "runtime_s": 1200.653,
+        "total_delay": 51444
       },
       {
         "baseline_delay": 152284,
@@ -314,17 +326,17 @@
         "legal": true,
         "ratio": 1.4467414022420673,
         "reasons": [],
-        "runtime_s": null,
+        "runtime_s": 1631.2933084000251,
         "total_delay": 105260
       },
       {
         "baseline_delay": 82491,
         "case": "router",
         "legal": true,
-        "ratio": 1.1198430691120373,
+        "ratio": 1.1584675663909447,
         "reasons": [],
-        "runtime_s": null,
-        "total_delay": 73663
+        "runtime_s": 1200.78,
+        "total_delay": 71207
       }
     ],
     "complete": true,
@@ -336,6 +348,7 @@
   "schema": "m3d-route-runtime-binding-v1",
   "source_snapshot_sha256_set": [
     "1685cd1f4765e9c2b9959e9005db78ee2b8626428e88dc19b3fb7b52df812d52",
+    "246f4d38304f7e28e55835273c3d3f4deb07b5f8dc577fcce8e57286ba40d75a",
     "7d6122a6611cd0dacce40187807bdd90b6ea4900968d51a034a8c774ebed4e85"
   ],
   "submission": "luna6-independent-fresh",
